@@ -4,6 +4,7 @@
 		<!-- avatar circle -->
 		<div class="flex-shrink-0 mr-5">
 			<div class="
+			sm:flex
 			cursor-pointer
 			font-bold
 			w-12
@@ -14,13 +15,14 @@
 			justify-center
 			rounded-full
 			">
-				R
+			<img class="rounded-full" src="assets/photo.jpg">
 			</div>
 		</div>
 		<!-- form -->
 		<div class="flex-1">
 			<!-- textarea -->
 			<textarea
+			(keyup.enter)="sendTweet()"
 			[(ngModel)]="tweetMessage"
 			(input)="changeTweet()"
 			[maxLength]="teewetMaxLenght"
